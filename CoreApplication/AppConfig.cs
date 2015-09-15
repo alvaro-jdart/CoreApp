@@ -8,14 +8,12 @@ using System.Threading.Tasks;
 
 namespace Jdart.CoreApp
 {
-    public class AppConfigurationInfo : IAppConfigurationInfo
+    public class AppConfig : IAppConfig
     {
-        internal AppConfigurationInfo() { }
+        internal AppConfig() { }
 
-        public DependencyResolver DependencyResolver { get; internal set; }
+        public IDependencyResolver DependencyResolver { get; internal set; }
 
         public IAppLogger Logger { get; internal set; }
-
-        public Action<Exception> HandleError { get; internal set; }
     }
 }

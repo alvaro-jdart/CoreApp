@@ -8,10 +8,7 @@ using System.Threading.Tasks;
 
 namespace Jdart.CoreApp.Settings
 {
-    /// <summary>
-    /// Сервис модульных настроек
-    /// </summary>
-    public interface ISettingsService<TContainer> : IDependencyConfig<TContainer>, IInitService
+    public interface ISettings<TContainer> : IDependency<TContainer>, IInit
     {
     }
 }

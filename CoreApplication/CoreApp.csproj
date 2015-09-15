@@ -40,23 +40,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppConfiguration.cs" />
-    <Compile Include="AppConfigurationOptions.cs" />
-    <Compile Include="DependencyConfigCollection.cs" />
+    <Compile Include="Application.cs" />
+    <Compile Include="AppOptions.cs" />
     <Compile Include="Dependency\DependecyResolver.cs" />
-    <Compile Include="Dependency\IDependencyConfig.cs" />
-    <Compile Include="IAppConfiguration.cs" />
-    <Compile Include="AppConfigurationInfo.cs" />
-    <Compile Include="IAppConfigurationInfo.cs" />
-    <Compile Include="InitServiceCollection.cs" />
-    <Compile Include="Init\IInitService.cs" />
+    <Compile Include="Dependency\IDependency.cs" />
+    <Compile Include="Dependency\IDependencyResolver.cs" />
+    <Compile Include="AppConfig.cs" />
+    <Compile Include="IAppConfig.cs" />
+    <Compile Include="IApplication.cs" />
+    <Compile Include="Init\IInit.cs" />
     <Compile Include="Log\EmptyLogger.cs" />
     <Compile Include="Log\IAppLogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Settings\ISettingsService.cs" />
+    <Compile Include="Settings\ISettings.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
     <None Include="Jdart.CoreApp.nuspec" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
