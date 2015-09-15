@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>$id$</id>
+    <title>$id$</title>
+    <version>$version$</version>
+    <authors>alvaro-jdart</authors>
+    <owners>alvaro-jdart</owners>
+    <description>$description$</description>
+  </metadata>
+  <files>
+    <file src="bin\$configuration$\$id$.dll" target="lib\net45\" />
+    <file src="bin\$configuration$\$id$.pdb" target="lib\net45\" />
+    <file src="bin\$configuration$\$id$.xml" target="lib\net45\" />
+  </files>
+</package>
