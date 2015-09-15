@@ -1,0 +1,2 @@
+# CoreApp
+Architecture framework
