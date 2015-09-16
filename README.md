@@ -8,6 +8,8 @@ Application
 
 Application is main class in project
 
+```c#
+
 var application = new Application<Container>(new AppOptions<Container>
 {
 	DependencyContainer = container;
@@ -16,6 +18,8 @@ var application = new Application<Container>(new AppOptions<Container>
 	VerifyAction = c => c.Verify();
 	Logger = logger;
 });
+
+```
 
 When you create application, you should set Container for registration dependencies, delegates for getting services, action for verifying correct dependencies and Logger.
 
