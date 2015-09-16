@@ -24,6 +24,9 @@ namespace Jdart.CoreApp
         public Application(AppOptions<TContainer> options)
         {
             if (options == null) throw new ArgumentNullException(nameof(options));
+            if (options.DependencyContainer == null) throw new ArgumentException(nameof(options.DependencyContainer));
+            if (options.GetServiceFunc == null) throw new ArgumentException(nameof(options.GetServiceFunc));
+            if (options.GetAllServicesFunc == null) throw new ArgumentException(nameof(options.GetAllServicesFunc));
 
             _logger = options.Logger ?? new EmptyLogger();
             _container = options.DependencyContainer;
