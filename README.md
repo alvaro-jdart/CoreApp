@@ -22,6 +22,8 @@ When you create application, you should set Container for registration dependenc
 
 Dependency Module contains code for registration services of one module. For example:
 
+```c#
+
 public class FacebookDependency: IIDependency<Container>
 {
 	public void Register(Container container)
@@ -31,6 +33,8 @@ public class FacebookDependency: IIDependency<Container>
 }
 
 application.SetDependency(new FacebookDependency());
+
+```
 
 2) Init
 
