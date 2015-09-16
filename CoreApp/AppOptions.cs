@@ -13,7 +13,7 @@ namespace Jdart.CoreApp
 
         public Func<Type, object> GetServiceFunc { get; set; }
 
-        public Func<Type, IEnumerable<object>> GetServicesFunc { get; set; }
+        public Func<Type, IEnumerable<object>> GetAllServicesFunc { get; set; }
 
         public Action<TContainer> VerifyAction { get; set; }
 

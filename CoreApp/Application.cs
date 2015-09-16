@@ -27,7 +27,7 @@ namespace Jdart.CoreApp
 
             _logger = options.Logger ?? new EmptyLogger();
             _container = options.DependencyContainer;
-            _dependencyResolver = new DependencyResolver(options.GetServiceFunc, options.GetServicesFunc);
+            _dependencyResolver = new DependencyResolver(options.GetServiceFunc, options.GetAllServicesFunc);
             _verify = options.VerifyAction ?? (c => { });
             
             _resultInfo = new Lazy<IAppConfig>(Run);
@@ -95,7 +95,7 @@ namespace Jdart.CoreApp
 
         #endregion
 
-        public IAppConfig Build()
+        public virtual IAppConfig Build()
         {
             return _resultInfo.Value;
         }
