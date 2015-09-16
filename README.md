@@ -3,7 +3,8 @@
 If your project has too many dependencies and you don't understand how to make easier, coreApp for you. 
 You should split your configs on dependencies and initializations. These services should register in Application class;
 
-1) Application
+Application
+-----------
 
 Application is main class in project
 
@@ -18,7 +19,8 @@ var application = new Application<Container>(new AppOptions<Container>
 
 When you create application, you should set Container for registration dependencies, delegates for getting services, action for verifying correct dependencies and Logger.
 
-1) Dependencies
+Dependencies
+------------
 
 Dependency Module contains code for registration services of one module. For example:
 
@@ -36,9 +38,12 @@ application.SetDependency(new FacebookDependency());
 
 ```
 
-2) Init
+Init
+----
 
 Init Services will called after registration dependencies and you can use Dependency Resolver for additional settings.For Example
+
+```c#
 
 public class AspNetMvcInit: IInit
 {
@@ -48,14 +53,21 @@ public class AspNetMvcInit: IInit
 	}
 }
 
-application.SetInit(new AspNetMvcInit())
+application.SetInit(new AspNetMvcInit());
 
-3) Build
+```
+
+Build
+-----
 
 When you have added all settings, you should call Build method for registration all things. After this you can use dependencyResolver and Logger for starting your project.
+
+```c#
 
 var appConfig = application.SetDependency(new FacebookDependency())
 						   .SetInit(new AspNetMvcInit())
 						   .Build();
 
 appConfig.DependencyResolver.GetService<MainService>().Start();
+
+```
