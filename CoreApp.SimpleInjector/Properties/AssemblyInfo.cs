@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
 [assembly: AssemblyTitle("Jdart.CoreApp.SimpleInjector")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("SimpleInjector integration library")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Jdart")]
 [assembly: AssemblyProduct("Jdart.CoreApp.SimpleInjector")]

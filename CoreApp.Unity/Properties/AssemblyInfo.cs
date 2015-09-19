@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // Управление общими сведениями о сборке осуществляется с помощью 
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("CoreApp.Autofac")]
-[assembly: AssemblyDescription("Autofac integration library")]
+[assembly: AssemblyTitle("CoreApp.Unity")]
+[assembly: AssemblyDescription("Unity integration library")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Jdart")]
-[assembly: AssemblyProduct("CoreApp.Autofac")]
-[assembly: AssemblyCopyright("Copyright  © Jdart  2015")]
+[assembly: AssemblyProduct("CoreApp.Unity")]
+[assembly: AssemblyCopyright("Copyright © Jdart  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("3ec126a7-a02a-46b2-aa05-c423ecff40d0")]
+[assembly: Guid("fb98c3f7-3342-4394-95ce-cb4894a4d722")]
 
 // Сведения о версии сборки состоят из следующих четырех значений:
 //
