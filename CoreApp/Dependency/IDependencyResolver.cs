@@ -12,5 +12,7 @@ namespace Jdart.CoreApp.Dependency
         IEnumerable<object> GetServices(Type type);
 
         IEnumerable<T> GetServices<T>();
+
+        object GetContainer();
     }
 }

@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DependencyResolverExtensions.cs" />
     <Compile Include="Dependency\IUnityDependency.cs" />
     <Compile Include="UnityApplication.cs" />
     <Compile Include="UnityOptions.cs" />

@@ -9,18 +9,21 @@ namespace Jdart.CoreApp.Dependency
     /// <summary>
     /// Менеджер сервисов
     /// </summary>
-    public class DependencyResolver : IDependencyResolver
+    public class DependencyResolver<TResultContainer> : IDependencyResolver
     {
+        private readonly TResultContainer _container;
         private readonly Func<Type,object> _getService;
         private readonly Func<Type, IEnumerable<object>> _getServices;
 
-        public DependencyResolver(Func<Type, object> getService, Func<Type, IEnumerable<object>> getServices)
+        public DependencyResolver(TResultContainer container, Func<TResultContainer, Func<Type, object>> getServiceFunc, Func<TResultContainer, Func<Type, IEnumerable<object>>> getAllServicesFunc)
         {
-            if (getService == null) throw new ArgumentNullException(nameof(getService));
-            if (getServices == null) throw new ArgumentNullException(nameof(getServices));
+            if (container == null) throw new ArgumentNullException(nameof(container));
+            if (getServiceFunc == null) throw new ArgumentNullException(nameof(getServiceFunc));
+            if (getAllServicesFunc == null) throw new ArgumentNullException(nameof(getAllServicesFunc));
 
-            _getService = getService;
-            _getServices = getServices;
+            _container = container;
+            _getService = getServiceFunc(container);
+            _getServices = getAllServicesFunc(container);
         }
 
         /// <summary>
@@ -50,6 +53,16 @@ namespace Jdart.CoreApp.Dependency
             if (type == null) throw new ArgumentNullException(nameof(type));
 
             return _getServices(type);
+        }
+
+        public object GetContainer()
+        {
+            return _container;
+        }
+
+        public TResultContainer GetTypedContainer()
+        {
+            return _container;
         }
     }
 }

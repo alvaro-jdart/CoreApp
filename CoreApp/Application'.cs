@@ -133,7 +133,7 @@ namespace Jdart.CoreApp
 
             #endregion
 
-            var resolver = new DependencyResolver(_getServiceFunc(resultContainer), _getAllServicesFunc(resultContainer));
+            var resolver = new DependencyResolver<TResultContainer>(resultContainer, _getServiceFunc, _getAllServicesFunc);
 
             #region Init
 

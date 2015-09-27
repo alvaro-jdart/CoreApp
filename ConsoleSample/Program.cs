@@ -16,7 +16,7 @@ namespace Jdart.ConsoleSample
         {
             var app = new SimpleApplication(new AppLogger());
 
-            var config = app.SetDependency(new SwiffySettings())
+            var config = app.SetSettings(new SwiffySettings())
                             .Build();
 
             var globalService = config.DependencyResolver.GetService<GlobalService>();
